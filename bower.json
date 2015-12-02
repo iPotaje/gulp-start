@@ -1,0 +1,22 @@
+{
+  "name": "map",
+  "description": "",
+  "main": "dist/index.htm",
+  "authors": [
+    "Emilio G. Correa <ipotaje@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "leaflet": "~0.7.7"
+  }
+}
