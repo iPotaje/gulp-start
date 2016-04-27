@@ -20,7 +20,8 @@ var minifyHTML      = require('gulp-minify-html');
 var dest      = {
   preDirectory      : 'pre',
   directory         : 'dist',
-  bundle            : '/' + 'all.js'
+  bundle            : '/' + 'all.js',
+  open              : '/dist/index.htm'
 };
 
 var src       = {
@@ -38,7 +39,7 @@ gulp.task('webserver', function() {
     .pipe(webserver({
       livereload: true,
       directoryListing: true,
-      open: true
+      open: dest.open
     }));
 });
 
@@ -198,7 +199,7 @@ gulp.task('minify-html', function() {
           }
         }
       }
-    }))    
+    }))
     .pipe(minifyHTML(opts))
     .pipe(gulp.dest('./dist/'));
 });
